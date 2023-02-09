@@ -13,28 +13,23 @@
         <!--A-frameにAR.jsを紐づける-->
         <a-scene embedded arjs="debugUIEnabled:false;">
             <a-assets>
-                <a-asset-item id="3DModel1" src="14nm.obj"></a-asset-item>
-                <a-asset-item id="Material1" src="14nm.mtl"></a-asset-item>
-                <a-asset-item id="3DModel2" src="14inv.obj"></a-asset-item>
-                <a-asset-item id="Material2" src="14inv.mtl"></a-asset-item>
-                <a-asset-item id="3DModel3" src="14nand.obj"></a-asset-item>
-                <a-asset-item id="Material3" src="14nand.mtl"></a-asset-item>
-                <a-asset-item id="3DModel4" src="14nor.obj"></a-asset-item>
-                <a-asset-item id="Material4" src="14nor.mtl"></a-asset-item>
+                <a-asset-item id="3DModel1" src="14inv.obj"></a-asset-item>
+                <a-asset-item id="Material1" src="14inv.mtl"></a-asset-item>
+                <a-asset-item id="3DModel2" src="14nand.obj"></a-asset-item>
+                <a-asset-item id="Material2" src="14nand.mtl"></a-asset-item>
+                <a-asset-item id="3DModel3" src="14nor.obj"></a-asset-item>
+                <a-asset-item id="Material3" src="14nor.mtl"></a-asset-item>
             </a-assets>
             <!--マーカーを登録-->
-            <a-marker type="pattern" url="14nm.patt">
-                <!--マーカー上にオブジェクトを表示する-->
-                <a-obj-model src="#3DModel" mtl="#Material" scale="0.001 0.001 0.001" position="0 0 -1"></a-obj-model>
-            </a-marker>
             <a-marker type="pattern" url="not.patt">
-                <a-obj-model src="#3DModel2" mtl="#Material2" scale="0.01 0.01 0.01" position="0 0 0"></a-obj-model>
+                <!--マーカー上にオブジェクトを表示する-->
+                <a-obj-model src="#3DModel1" mtl="#Material1" scale="0.01 0.01 0.01" position="0 0 0"></a-obj-model>
             </a-marker>
             <a-marker type="pattern" url="nand.patt">
-                <a-obj-model src="#3DModel3" mtl="#Material3" scale="0.01 0.01 0.01" position="0 0 0"></a-obj-model>
+                <a-obj-model src="#3DModel2" mtl="#Material2" scale="0.01 0.01 0.01" position="0 0 0"></a-obj-model>
             </a-marker>
             <a-marker type="pattern" url="nor.patt">
-                <a-obj-model src="#3DModel4" mtl="#Material4" scale="0.01 0.01 0.01" position="0 0 0"></a-obj-model>
+                <a-obj-model src="#3DModel3" mtl="#Material3" scale="0.01 0.01 0.01" position="0 0 0"></a-obj-model>
             </a-marker>
             <!--AR用のカメラを置く-->
             <a-entity camera></a-entity>
